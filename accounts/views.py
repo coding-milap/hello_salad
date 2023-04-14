@@ -78,7 +78,7 @@ def forgot_password(request):
 
         send_mail(
             'Reset Password',
-            f'Please do not share this link with anyone!! http://127.0.0.1:8000/accounts/reset-password/{user.user_id}',
+            f'Please do not share this link with anyone!! https://healthylife.onrender.com/accounts/reset-password/{user.user_id}',
             settings.EMAIL_HOST_USER,
             [email],
             fail_silently=False,
