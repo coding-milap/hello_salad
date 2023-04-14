@@ -41,7 +41,7 @@ class UserMembership(models.Model):
 
     uid = models.UUIDField(default=uuid.uuid4,primary_key=True)
     user = models.OneToOneField(User,on_delete=models.CASCADE,related_name="usermembership")
-    membership = models.OneToOneField(Membership,on_delete=models.CASCADE,related_name="usermembership")
+    membership = models.ForeignKey(Membership,on_delete=models.CASCADE,related_name="usermembership")
 
 
     def __str__(self):
