@@ -48,8 +48,8 @@ def checkout(request,id):
             }
         ],
         mode='payment',
-        success_url=f'http://127.0.0.1:8000/success/{membership.membership_id}',
-        cancel_url='http://127.0.0.1:8000/cancel',
+        success_url=f'https://healthylife.onrender.com/success/{membership.membership_id}',
+        cancel_url='https://healthylife.onrender.com/cancel',
 
     )
 
