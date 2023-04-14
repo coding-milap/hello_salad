@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIMPLY SALAD</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    {% comment %} <link rel="stylesheet" href="{% static 'store/css/style.css' %}"> {% endcomment %}
+
+</head>
+
+<style>
+    
+main {
+	margin: 50px 0;
+}
+
+.about-us {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.about-us h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.founder {
+	margin-bottom: 20px;
+}
+
+.founder img {
+	width: 200px;
+	height: 200px;
+	 border-radius: 50%; 
+	 object-fit: cover; 
+	 object-position: center; 
+	 margin-right: 20px; 
+}
+
+.about-us p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+</style>
+
+  <body>
+
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="{% url 'index' %}">
+        <img
+          src="{% static 'images/logo.jpg' %}"
+          height="80"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
+        </li>
+
+           <li class="nav-item">
+          <a class="nav-link" href="{% url 'membership-plans' %}">Membership Plans</a>
+        </li>
+       
+
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+    
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="40"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" href="{% url 'user-profile' %}">My profile</a>
+          </li>
+          
+          <li>
+            <a class="dropdown-item" href="{% url 'user-logout' %}">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+    
+<main>
+		<section class="about-us">
+			<h1>About Us</h1>
+			<div class="founder">
+				<img src="{% static 'images/person2.jpg' %}" alt="Founder 1">
+				<img src="{% static 'images/person2.jpg' %}" alt="Founder 2">
+			</div>
+			<p>We are a group of salad enthusiasts who are passionate about creating healthy and delicious salads for everyone to enjoy. Our goal is to provide fresh and tasty salads using only the best ingredients.</p>
+			<p>Our journey began when our founder, John, decided to start a healthy food business after struggling with his own health issues. He wanted to create something that was not only good for him but for others as well. With the help of his friends, they came together to create the perfect salads that are not only nutritious but also tasty.</p>
+			<p>Since then, we have expanded our business and have become known for our delicious salads that are made with love and care. We strive to provide the best customer service and make sure that our customers leave satisfied with their meals.</p>
+		</section>
+	</main>
+
+
+
+
+
+<hr>
+
+
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">code by Milap</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+></script>
+
+  </body>
+</html>
